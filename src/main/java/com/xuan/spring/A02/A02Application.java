@@ -23,9 +23,9 @@ public class A02Application {
     private static final Logger log = LoggerFactory.getLogger(A02Application.class);
 
     public static void main(String[] args) {
-//        testClassPathXmlApplicationContext();
+        testClassPathXmlApplicationContext();
 //        testFileSystemXmlApplicationContext();
-        testAnnotationConfigApplicationContext();
+//        testAnnotationConfigApplicationContext();
     }
 
     private static void testClassPathXmlApplicationContext(){
