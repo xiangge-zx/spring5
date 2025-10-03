@@ -32,7 +32,7 @@ public class DigInAutowired {
         Bean1 bean1 = new Bean1();
 //        System.out.println(bean1);
 //        processor.postProcessProperties(null,bean1,"bean1");
-//        System.out.println(bean1);
+        System.out.println(bean1);
 
         Method findAutowiringMetadata= AutowiredAnnotationBeanPostProcessor.class.getDeclaredMethod("findAutowiringMetadata", String.class, Class.class, PropertyValues.class); // 获取后处理器的方法,用于研究是如何解析@Autowire
         findAutowiringMetadata.setAccessible(true);
@@ -47,5 +47,6 @@ public class DigInAutowired {
         DependencyDescriptor dd1 = new DependencyDescriptor(bean3,false);
         Object o = beanFactory.doResolveDependency(dd1,null,null,null); // doResolveDependency找要注入对象的bean或者value值
         System.out.println(o); // com.xuan.spring.A04.Bean3@2c767a52
+
     }
 }
